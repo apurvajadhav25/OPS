@@ -1,4 +1,4 @@
-h1 {
+h1{
     text-align: center;
     width: 100%;
     color: #111;
@@ -9,18 +9,43 @@ h1 {
   .form-wrapper {
     width: 1200px;
     display: flex;
-    
+    text-align:center;
     padding: 20px 40px;
     margin: 0 -1rem 1rem -1rem;
     border-radius: 10px;
     box-shadow: 0px 10px 50px #555;
     background-color: #ffffff;
+    justify-content: center;
   }
+
+  .firstName,.middleName,
+.lastName,
+.email,
+.password,.gender,.maritialstatus,.education,.fatherFirstName,.fatherMiddleName,
+.fatherLastName,.motherFirstName,.motherMiddleName,
+.motherLastName,.state,.district,.houseNo,.village,.mobileNo,.zipCode,.nameAddress,.aadharNo,.presentAddress,.typeAppl,.bookletType,.employmentType,.placeOut,.citizen,.ecr,.birthVillage,.state,.citizen{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align:center ;
+}
+
+
+
+
+
   
   label {
     font-size: 1.2em;
     margin-bottom: 0.25em;
     color: #222;
+    font-weight: lighter;
+  }
+
+  select {
+    font-size: 0.8em;
+    margin-bottom: 0.25em;
+    color: rgb(34, 34, 34);
     font-weight: lighter;
   }
   
@@ -36,6 +61,9 @@ h1 {
     font-weight: lighter;
     color: #999;
   }
+
+  
+  
   
   input.error {
     border: 1px solid red;

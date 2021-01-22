@@ -184,7 +184,7 @@ class Form extends React.Component {
           <h1>NEW PASSPORT APPLICATION</h1>
           <div>
           <h2>Service Details</h2>
-          <div className="typeappl">  
+          <div className="typeAppl">  
             <label>Type of Application
             <select value={this.state.application} onChange={this.handleSubmit}> 
             <option name=''>Select Gender</option>
@@ -194,12 +194,12 @@ class Form extends React.Component {
               </label>
 
           </div>    
-          <div className="typeappl">  
+          <div className="bookletType">  
             <label>Type of Passport Booklet
             <select value={this.state.application} onChange={this.handleSubmit}> 
-            <option name=''>Select Gender</option>
-                  <option name="normal">36 Pages</option>
-                  <option name="tatkaal">60 Pages</option>
+            <option name=''>Select Booklet Type</option>
+                  <option name="36pages">36 Pages</option>
+                  <option name="60pages">60 Pages</option>
               </select>
               </label>
 
@@ -325,7 +325,7 @@ class Form extends React.Component {
 
           </div>    
           
-          <div className="placeout">  
+          <div className="placeOut">  
             <label>Is your Place of Birth out of India
             <select value={this.state.place} onChange={this.handleSubmit}> 
            
@@ -338,7 +338,7 @@ class Form extends React.Component {
               </label>
 
           </div>    
-          <div className="employmenttype">  
+          <div className="employmentType">  
             <label>Employment Type
             <select value={this.state.employment} onChange={this.handleSubmit}> 
             <option name=''>Select Employment Type</option>
@@ -426,7 +426,7 @@ class Form extends React.Component {
 
           </div> 
 
-          <div className="birthvillage">
+          <div className="birthVillage">
               <label htmlFor="birthVillage">Birth Village or Town or City</label>
               <input
                 className={formErrors.birthVillage.length > 0 ? "error" : null}
@@ -705,7 +705,7 @@ class Form extends React.Component {
               />
               </div>
              
-<h1>welcome</h1>
+
 
             <div className="createAccount">
               <button type="submit">Submitt</button>
