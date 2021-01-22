@@ -11,6 +11,10 @@ const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
+const mobileRegex = RegExp(
+  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
+
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;
 
@@ -46,6 +50,7 @@ class Form extends React.Component {
       lastName: null,
       email: null,
       password: null,
+      mobileNo:null,
       formErrors: {
         aadharNo:"",
         firstName: "",
@@ -59,7 +64,8 @@ class Form extends React.Component {
       fatherLastName:"",
       motherFirstName:"",
       motherMiddleName:"",
-      motherLastName:""
+      motherLastName:"",
+      mobileNo:""
       }
     };
   }
@@ -158,6 +164,12 @@ class Form extends React.Component {
           ? ""
           : "invalid email address";
         break;
+        
+        case "mobileNo":
+        formErrors.mobileNo = mobileRegex.test(value)
+          ? ""
+          : "invalid mobile number";
+        break;
       case "password":
         formErrors.password =
           value.length < 6 ? "minimum 6 characaters required" : "";
@@ -207,7 +219,7 @@ class Form extends React.Component {
           
           </div>
           
-          <h2>APPLICANT details</h2>
+          <h2>Applicant Details</h2>
             <div className="firstName">
               <label htmlFor="firstName">Applicant's First Name</label>
               <input
@@ -699,10 +711,14 @@ class Form extends React.Component {
                 
                 placeholder="Mobile Number"
                 type="text"
-                name="mobileNumber"
+                name="mobileNo"
                 noValidate
                 onChange={this.handleChange}
               />
+
+            {formErrors.mobileNo.length > 0 && (
+                <span className="errorMessage">{formErrors.mobileNo}</span>
+              )}            
               </div>
              
 
