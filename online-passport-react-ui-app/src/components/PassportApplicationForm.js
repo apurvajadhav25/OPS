@@ -1,6 +1,6 @@
 
 
-
+import './PassportApplicationForm.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { SplitButton, Dropdown } from 'react-bootstrap';  
@@ -703,27 +703,7 @@ class Form extends React.Component {
                 onChange={this.handleChange}
               />
               </div>
-             <h2> Documents Submitted As Proof</h2>
-             <div className="addressProof">  
-            <label>Address Proof
-            <select value={this.state.employment} onChange={this.handleSubmit}> 
-            <option name=''>Select Employment Type</option>
-                  <option name="government">Aadhar Card </option>
-                  <option name="private">Private</option>
-                  <option name="divorced">Not employed</option>
-                  <option name="widow">Student</option>
-                  <option name="seperator">Retired Government Servant</option>
-                  <option name="divorced">Private Governement Servant</option>
-                  <option name="widow">Homemaker</option>
-                  <option name="seperator">Others</option>
-                  <option name="divorced">PSU</option>
-                  <option name="widow">Self Employed</option>
-                  <option name="seperator">Statutory Body</option>
-
-              </select>
-              </label>
-
-          </div>    
+             
 
 
             <div className="createAccount">
